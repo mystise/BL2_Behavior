@@ -1,0 +1,128 @@
+Event: "ShotEnemy"
+Variables:
+- "SkillInstigator"
+- "bWasCrit"
+Behaviors:
+  Behavior_CompareBool_18 Delay 0 Index 20:14 Link 14
+  - "BoolValue" : BVARLINK_Input : i 31
+    -  : BVAR_Bool : i 14
+    Behavior_SimpleMath_170 Delay 0 Index 13:16 Link 16
+    - "A" : BVARLINK_Input : i 35
+      -  : BVAR_Float : i 16
+    - "B" : BVARLINK_Input : i 36
+      -  : BVAR_Float : i 3
+    - "Result" : BVARLINK_Output : i 37
+      -  : BVAR_Float : i 3
+      Behavior_CompareFloat_87 Delay 0 Index 16:10 Link -16777206
+      - "ValueA" : BVARLINK_Input : i 22
+        -  : BVAR_Float : i 11
+      - "ValueB" : BVARLINK_Input : i 23
+        -  : BVAR_Float : i 5
+        Behavior_SimpleMath_168 Delay 0 Index 8:12 Link 16777228
+        - "A" : BVARLINK_Input : i 27
+          -  : BVAR_Float : i 5
+        - "B" : BVARLINK_Input : i 28
+          -  : BVAR_Float : i 13
+        - "Result" : BVARLINK_Output : i 29
+          -  : BVAR_Float : i 5
+          Behavior_SimpleMath_169 Delay 0 Index 11:15 Link -16777201
+          - "A" : BVARLINK_Input : i 32
+            -  : BVAR_Float : i 15
+          - "B" : BVARLINK_Input : i 33
+            -  : BVAR_Float : i 1
+          - "Result" : BVARLINK_Output : i 34
+            -  : BVAR_Float : i 1
+            Behavior_ActivateSkill_18 Delay 0 Index 14:18 Link -16777198
+            - "Context" : BVARLINK_Context : i 39
+              -  : BVAR_Object : i 2
+              Behavior_CompareFloat_89 Delay 0 Index 18:19 Link -16777197
+              - "ValueA" : BVARLINK_Input : i 40
+                -  : BVAR_Float : i 1
+              - "ValueB" : BVARLINK_Input : i 41
+                -  : BVAR_Float : i 17
+                Behavior_DeactivateSkill_44 Delay 0 Index 19:3 Link 33554435
+                - "Context" : BVARLINK_Context : i 7
+                  -  : BVAR_Object : i 2
+          Behavior_SimpleMath_164 Delay 0.1 Index 10:4 Link -16777212
+          - "A" : BVARLINK_Input : i 8
+            -  : BVAR_Float : i 5
+          - "B" : BVARLINK_Input : i 9
+            -  : BVAR_Float : i 6
+          - "Result" : BVARLINK_Output : i 10
+            -  : BVAR_Float : i 5
+      Behavior_SimpleMath_165 Delay 6 Index 15:6 Link -16777210
+      - "A" : BVARLINK_Input : i 13
+        -  : BVAR_Float : i 3
+      - "B" : BVARLINK_Input : i 14
+        -  : BVAR_Float : i 8
+      - "Result" : BVARLINK_Output : i 15
+        -  : BVAR_Float : i 3
+        Behavior_CompareFloat_85 Delay 0 Index 4:5 Link -16777211
+        - "ValueA" : BVARLINK_Input : i 11
+          -  : BVAR_Float : i 3
+        - "ValueB" : BVARLINK_Input : i 12
+          -  : BVAR_Float : i 7
+          Behavior_SimpleMath_167 Delay 0 Index 3:11 Link 16777227
+          - "A" : BVARLINK_Input : i 24
+            -  : BVAR_Float : i 1
+          - "B" : BVARLINK_Input : i 25
+            -  : BVAR_Float : i 12
+          - "Result" : BVARLINK_Output : i 26
+            -  : BVAR_Float : i 1
+            Behavior_DeactivateSkill_43 Delay 0 Index 9:1 Link -16777215
+            - "Context" : BVARLINK_Context : i 3
+              -  : BVAR_Object : i 2
+              Behavior_CompareFloat_88 Delay 0 Index 1:17 Link -16777199
+              - "ValueA" : BVARLINK_Input : i 38
+                -  : BVAR_Float : i 1
+                Behavior_SimpleMath_166 Delay 0 Index 17:9 Link 33554441
+                - "A" : BVARLINK_Input : i 19
+                  -  : BVAR_Float : i 10
+                - "B" : BVARLINK_Input : i 20
+                  -  : BVAR_Float : i 3
+                - "Result" : BVARLINK_Output : i 21
+                  -  : BVAR_Float : i 3
+                  Behavior_SimpleMath_163 Delay 1 Index 7:2 Link -16777214
+                  - "A" : BVARLINK_Input : i 4
+                    -  : BVAR_Float : i 3
+                  - "B" : BVARLINK_Input : i 5
+                    -  : BVAR_Float : i 4
+                  - "Result" : BVARLINK_Output : i 6
+                    -  : BVAR_Float : i 3
+                    Behavior_CompareFloat_85 Delay 0 Index 2:5 Link -16777211
+                    - "ValueA" : BVARLINK_Input : i 11
+                      -  : BVAR_Float : i 3
+                    - "ValueB" : BVARLINK_Input : i 12
+                      -  : BVAR_Float : i 7
+                      LOOP DETECTED 3
+Event: "OnPaused"
+Variables:
+- "SkillInstigator"
+Behaviors:
+  Behavior_CompareFloat_86 Delay 0 Index 21:8 Link 8
+  - "ValueA" : BVARLINK_Input : i 17
+    -  : BVAR_Float : i 9
+  - "ValueB" : BVARLINK_Input : i 18
+    -  : BVAR_Float : i 1
+    Behavior_DeactivateSkill_45 Delay 0 Index 6:13 Link 13
+    - "Context" : BVARLINK_Context : i 30
+      -  : BVAR_Object : i 2
+      Behavior_PostAkEvent_67 Delay 0 Index 12:7 Link -16777209
+      - "Context" : BVARLINK_Context : i 16
+        -  : BVAR_Object : i 2
+        Behavior_SimpleMath_162 Delay 0 Index 5:0 Link 0
+        - "A" : BVARLINK_Input : i 0
+          -  : BVAR_Float : i 0
+        - "B" : BVARLINK_Input : i 1
+          -  : BVAR_Float : i 1
+        - "Result" : BVARLINK_Output : i 2
+          -  : BVAR_Float : i 1
+          Behavior_CompareFloat_86 Delay 0.08 Index 0:8 Link -16777208
+          - "ValueA" : BVARLINK_Input : i 17
+            -  : BVAR_Float : i 9
+          - "ValueB" : BVARLINK_Input : i 18
+            -  : BVAR_Float : i 1
+            LOOP DETECTED 6
+Event: "OnMissedWeaponShot"
+Variables:
+Behaviors:
