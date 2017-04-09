@@ -1,4 +1,4 @@
-# Converter
+# Behavior
 
 A BL2 modding utility. Converts from a log dump of a behavior provider to a tree of behaviors that's easier to read.
 
