@@ -27,6 +27,8 @@ The behavior tree is output to stdout, to output to a file use shell stdout redi
 Example:
 
     cargo run -- -f=critical_ascension.txt > critical_output.txt
+    
+    behavior -f=critical_ascension.txt > critical_output.txt
 
 ## Syntax-ish
 
